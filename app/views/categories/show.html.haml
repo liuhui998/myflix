@@ -1,9 +1,14 @@
-%p#notice= notice
+%section.genre
+  %header.clearfix
+    %h1= @category.name
+    .genre_sorting
+      Sort by:
+      %select(name="")
+        %option(value="a-z") Title: A - Z
+        %option(value="z-a") Title: Z - A
+        %option(value="rating") Rating
+  %article.row
+    - @videos.each do |video|
+      = render video
 
-%p
-  %b Name:
-  = @category.name
 
-= link_to 'Edit', edit_category_path(@category)
-\|
-= link_to 'Back', categories_path
