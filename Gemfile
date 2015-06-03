@@ -22,14 +22,21 @@ group :development, :test do
   gem 'pry-nav'
   gem 'rspec-rails', '~> 3.0'
   gem "guard-rspec"  
+  #gem 'minitest' 
+  #gem 'shoulda-matchers', '~> 2.8.0'
 end
 
 group :test do
+  gem 'shoulda-matchers', require: false
+
   gem 'database_cleaner'
-  gem 'shoulda-matchers'
+
 end
+
 
 group :production do
   gem 'rails_12factor'
 end
+
+
 

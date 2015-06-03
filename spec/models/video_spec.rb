@@ -1,11 +1,9 @@
 require 'spec_helper'
 
-describe Video do
-  it "save itself" do
-    video = Video.create(title: "Forrest Gump", description: "Forrest Gump's story")
-    video.save
-    expect(Video.first).to eq video
-  end
+
+RSpec.describe Video, type: :model do
+  
+  it { should belongs_to(:category) }
 
   it "belongs to category" do
     story = Category.create(name: "Story")
