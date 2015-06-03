@@ -14,12 +14,14 @@ group :development do
   gem 'thin'
   gem "better_errors"
   gem "binding_of_caller"
+  gem "growl"  
 end
 
 group :development, :test do
   gem 'pry'
   gem 'pry-nav'
   gem 'rspec-rails', '~> 3.0'
+  gem "guard-rspec"  
 end
 
 group :test do
