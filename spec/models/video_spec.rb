@@ -3,7 +3,7 @@ require 'spec_helper'
 
 RSpec.describe Video, type: :model do
   
-  it { should belongs_to(:category) }
+  it { should belong_to(:category) }
 
   it "belongs to category" do
     story = Category.create(name: "Story")
