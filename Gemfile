@@ -14,19 +14,31 @@ group :development do
   gem 'thin'
   gem "better_errors"
   gem "binding_of_caller"
+  gem "growl"  
 end
 
 group :development, :test do
   gem 'pry'
   gem 'pry-nav'
-  gem 'rspec-rails', '2.99'
+  gem 'rspec-rails', '~> 3.0'
+  gem "guard-rspec"  
+  gem 'fuubar'
+  #gem 'minitest' 
+  #gem 'shoulda-matchers', '~> 2.8.0'
 end
 
 group :test do
-  gem 'database_cleaner', '1.2.0'
+  gem 'shoulda-matchers', require: false
+
+  gem 'database_cleaner'
+
+
 end
+
 
 group :production do
   gem 'rails_12factor'
 end
+
+
 

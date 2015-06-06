@@ -1,5 +1,11 @@
 require 'spec_helper'
 
-describe Video do
-  pending "add some examples to (or delete) #{__FILE__}"
+
+RSpec.describe Video, type: :model do
+  
+  it { should belong_to(:category) }
+  it { should validate_presence_of(:title) }
+  it { should validate_presence_of(:description) }
+
+
 end
