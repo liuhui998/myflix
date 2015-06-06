@@ -22,6 +22,7 @@ group :development, :test do
   gem 'pry-nav'
   gem 'rspec-rails', '~> 3.0'
   gem "guard-rspec"  
+  gem 'fuubar'
   #gem 'minitest' 
   #gem 'shoulda-matchers', '~> 2.8.0'
 end
@@ -30,6 +31,7 @@ group :test do
   gem 'shoulda-matchers', require: false
 
   gem 'database_cleaner'
+
 
 end
 
