@@ -1,4 +1,7 @@
 %article.video_category
-  .videos.row
-    - @videos.each do |video|
-      = render video
+  - @categories.each do |category|
+    %header
+      %h3= category.name
+    .videos.row
+      - category.recent_videos.each do |video|
+        = render video
