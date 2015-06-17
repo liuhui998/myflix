@@ -15,8 +15,11 @@ RSpec.describe Video, type: :model do
     end
 
     it "returns an array of one video for an exact match" do
-      
+      futurama = Video.create(title: "Futurama", description: "Space travel")
+      back_to_future = Video.create(title: "Back to Future", description: "Space travel")
+      expect(Video.search_by_title("Futurama")).to eq [futurama]      
     end
+
     it "returns an array of one video for a partial match"
     it "returns an array of all matchs ordered by created_at"    
   end
