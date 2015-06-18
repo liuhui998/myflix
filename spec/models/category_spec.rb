@@ -28,7 +28,7 @@ describe Category do
       category = Category.create(name: "test category")
       6.times {Video.create(title: "Back to Future", description: "Space travel",category: category) }
       yesterday = Video.create(title: "Back to Future2", description: "Space travel",category: category, created_at: 1.day.ago)
-      expect(category.recent_videos).not_to include(yesterday )
+      expect(category.recent_videos).not_to include(yesterday)
     end
 
     it "return an empty array if the category does not have any vidoes" do
