@@ -9,10 +9,11 @@ Myflix::Application.routes.draw do
     end
   end
 
-  get '/home', to: 'videos#index', as: "home_path"
+  get '/home', to: 'videos#index', as: "home"
   get 'register', to: "users#new"
   get 'sign_in' , to: "sessions#new"
   resources :users, only: [:create]
+  resources :sessions, only: [:create]
 
   get 'ui(/:action)', controller: 'ui'
 
